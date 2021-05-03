@@ -3,21 +3,19 @@ Aggiungi elementi casuali all’array che ha meno elementi,
 fino a quando ne avrà tanti quanti l’altro. */
 
 
-let lettere = ["A","B"];
+let lettere = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N"];
 let numeri = [1,2,3,4,5]
 
-
-
-
-const numberRandom = (min,max) =>  Math.floor(Math.random() * (max - min + 1)) + min;
 
 function generatoreLettere (){
   let code = "";
   let lettere = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","U","V","W","X","Y","Z"];
-
+  
   code = code + lettere[numberRandom(0,lettere.length-1)];
   return code;
 }
+
+const numberRandom = (min,max) =>  Math.floor(Math.random() * (max - min + 1)) + min;
 
 while (numeri.length != lettere.length){
 
@@ -27,4 +25,5 @@ while (numeri.length != lettere.length){
     lettere.push(generatoreLettere ())
   }
 }
-console.log(lettere.sort());
+
+console.log(numeri.sort());
